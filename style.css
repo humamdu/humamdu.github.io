@@ -68,7 +68,7 @@ section {
 
 /* Navigation */
 nav {
-    background: white;
+    background: linear-gradient(120deg, #f8fbff 0%, #d0ecfffc 50%) !important;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
@@ -120,7 +120,7 @@ nav .container {
 .hero {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: white;
-    padding: 150px 0 100px;
+    padding: 111px 0 100px;
     margin-top: 70px;
 }
 
@@ -318,11 +318,11 @@ nav .container {
 }
 
 .timeline-item:nth-child(odd) .timeline-date {
-    right: -100px;
+    right: -130px;
 }
 
 .timeline-item:nth-child(even) .timeline-date {
-    left: -100px;
+    left: -130px;
 }
 
 .timeline-content {
@@ -635,5 +635,82 @@ footer {
     
     .section-title {
         font-size: 2rem;
+    }
+}
+
+/* Download Button Styles */
+.btn-download {
+    background: var(--primary-color);
+    margin-left: 15px; /* For English version */
+    /* margin-right: 15px; For Arabic version */
+}
+
+.btn-download:hover {
+    background: var(--dark-color);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* For mobile responsiveness */
+@media (max-width: 576px) {
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .btn-download {
+        margin-left: 0;
+        /* margin-right: 0; For Arabic version */
+    }
+}
+
+/* Floating WhatsApp Button */
+.float-whatsapp {
+    position: fixed;
+    bottom: 30px;
+    left: 25px; /* Change to right for RTL layout */
+    width: 50px;
+    height: 50px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.float-whatsapp:hover {
+    background: #128C7E;
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+}
+
+/* For Arabic/RTL layout */
+[dir="rtl"] .float-whatsapp {
+    left: auto;
+    right: 30px;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
     }
 }
