@@ -21,12 +21,15 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             
             const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            
-            window.scrollTo({
-                top: targetElement.offsetTop - 70,
-                behavior: 'smooth'
-            });
+            if (targetId != '#') {
+                
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 70,
+                    behavior: 'smooth'
+                });
+            }
         });
     });
     
@@ -86,16 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Project Modal (optional)
     const projectLinks = document.querySelectorAll('.project-link');
-    const modal = document.createElement('div');
-    modal.id = 'projectModal';
-    modal.className = 'modal';
-    modal.innerHTML = `
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <div class="modal-body"></div>
-        </div>
-    `;
-    document.body.appendChild(modal);
+    const modal = document.getElementById('projectModal');
     
     const closeModal = document.querySelector('.close-modal');
     const modalBody = document.querySelector('.modal-body');
@@ -104,13 +98,51 @@ document.addEventListener('DOMContentLoaded', function() {
     const projectsData = {
         "erp-system": {
             title: "Comprehensive ERP System",
-            description: "Developed a comprehensive ERP system using Yii and Laravel frameworks with MariaDB as the database management system. The system includes modules for sales, purchases, inventory, and accounting. Also developed integrations with platforms like Amazon and QuickBooks for automatic data exchange.",
-            technologies: ["PHP", "Yii", "Laravel", "MariaDB", "JavaScript", "API Integration"],
+            description: "Developed a comprehensive ERP system using Yii with MySQL as the database management system. The system includes modules for sales, purchases, inventory, manufacturing, refurbishment processes and accounting. Also developed integrations with platforms like Amazon , eBay , Back Market and QuickBooks for automatic data exchange.",
+            technologies: ["PHP", "Yii", "MySQL", "JavaScript", "API Integration"],
             image: "erp-project.jpg",
-            demoUrl: "#",
-            codeUrl: "#"
+            demoUrl: "https://newgsolution.com/",
+            codeUrl: "",
+            videoUrl: "<iframe width='744' height='419' src='https://www.youtube.com/embed/9j4mt3PC3ec' title='New G Solution Overview' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+            position:'40%',
         },
-        // Add other projects in the same format
+        "b2b-store": {
+            title: "B2B eCommerce Platform (ERP-Integrated)",
+            description: "Developed a B2B eCommerce platform using Laravel and MySQL, tightly integrated with an internal ERP system. The platform supports product browsing, order management, real-time inventory sync, and separate dashboards for customers and admins. It also includes secure payment processing through PayPal and MX Merchant.",
+            technologies: ["Laravel", "MySQL", "JavaScript", "Ajax", "PayPal", "MX Merchant"],
+            image: "b2b-project.jpg",
+            demoUrl: "https://humamdo.newgsolution.online/public/",
+            codeUrl: "",
+            position:'40%',
+        },
+        "course-system": {
+            title: "Course Store & Student Evaluation System",
+            description: "Built a full-featured Laravel platform that allows users to browse, purchase, and enroll in online courses. The system includes a dynamic student evaluation engine. Includes per-course progress tracking, user dashboards, and admin analytics.",
+            technologies: ["Laravel", "Blade", "MySQL", "Tailwind CSS", "JavaScript"],
+            image: "course-project.jpg",
+            demoUrl: "http://benimturkcemkw.com:8000/",
+            codeUrl: "",
+            position:'40%',
+        },
+        "clinic-desktop": {
+            title: "Clinic Management Desktop Application",
+            description: "Built a desktop application for a dermatology and laser clinic using C# and MySQL. The software supports patient archiving, treatment history logging, appointment scheduling, and basic accounting. Designed to run locally on Windows systems with a focus on usability for clinic staff.",
+            technologies: ["C#", ".NET", "MySQL", "Windows Forms"],
+            image: "clinic-app.jpg",
+            demoUrl: "",
+            codeUrl: "",
+            position:'80%',
+        },
+        "hematology-system": {
+            title: "Hematology Lab Management System",
+            description: "Developed a C# desktop application for receiving and managing hematology test results, linked directly to patient medical files. The system includes patient archiving, test result entry, search functionality, and print-ready reports generated via Crystal Reports. Built for offline use with a MySQL backend.",
+            technologies: ["C#", ".NET", "MySQL", "Crystal Reports"],
+            image: "hematology-app.jpg",
+            demoUrl: "",
+            codeUrl: "",
+            position:'80%',
+        }
+
     };
     
     projectLinks.forEach(link => {
@@ -125,25 +157,34 @@ document.addEventListener('DOMContentLoaded', function() {
                 technologies: ["Tech 1", "Tech 2"],
                 image: "project-placeholder.jpg"
             };
+
+            more_link = '';
+            if (project.demoUrl) {
+                more_link += `<a href="${project.demoUrl}" target="_blank">View Project</a>`;
+            }
+            if (project.codeUrl) {
+                more_link += `<a href="${project.codeUrl}" target="_blank">View Code</a>`;
+            }
             
             modalBody.innerHTML = `
                 <div class="modal-image">
                     <img src="${project.image}" alt="${project.title}">
                 </div>
-                <div class="modal-info">
+                <div class="project-info">
                     <h2>${project.title}</h2>
                     <p>${project.description}</p>
-                    <div class="modal-tech">
+                    <div class="project-tech">
                         ${project.technologies.map(tech => `<span>${tech}</span>`).join('')}
                     </div>
                     <div class="modal-links">
-                        <a href="${project.demoUrl || '#'}" target="_blank">View Project</a>
-                        <a href="${project.codeUrl || '#'}" target="_blank">View Code</a>
+                        ${more_link}
                     </div>
                 </div>
             `;
             
-            modal.style.display = "block";
+            modal.style.display = "flex";
+            modal.style.top = project.position;
+            modal.scroll(0,0);
             document.body.style.overflow = "hidden";
         });
     });
