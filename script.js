@@ -97,8 +97,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Project data (replace with your actual projects)
     const projectsData = {
         "erp-system": {
-            title: "Comprehensive ERP System",
-            description: "Developed a comprehensive ERP system using Yii with MySQL as the database management system. The system includes modules for sales, purchases, inventory, manufacturing, refurbishment processes and accounting. Also developed integrations with platforms like Amazon , eBay , Back Market and QuickBooks for automatic data exchange.",
+            title: "Enterprise ERP System for Trading & Inventory",
+            description: "Contributed to the development of a full-featured ERP system using Laravel and Yii frameworks, tailored for inventory-heavy trading businesses. The platform includes modules for purchases, sales, warehouse management, and accounting. Developed secure API integrations with Amazon , eBay , Back Market and QuickBooks for real-time synchronization. Focused on performance enhancements, database optimization, and user role management.",
             technologies: ["PHP", "Yii", "MySQL", "JavaScript", "API Integration"],
             image: "erp-project.jpg",
             demoUrl: "https://newgsolution.com/",
