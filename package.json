@@ -1,0 +1,31 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Modern Creative Portfolio with Next.js",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build --webpack",
+    "start": "next start",
+    "export": "next build --webpack && next export",
+    "lint": "next lint"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "typescript": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@tailwindcss/forms": "latest",
+    "framer-motion": "latest",
+    "next-themes": "latest",
+    "react-hook-form": "latest",
+    "autoprefixer": "latest",
+    "postcss": "latest",
+    "tailwindcss": "^3.4.4"
+  }
+}

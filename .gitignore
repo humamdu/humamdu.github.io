@@ -1,0 +1,85 @@
+# Node
+node_modules/
+.npm/
+
+# Next.js
+.next/
+out/
+build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# TypeScript
+*.tsbuildinfo
+
+# Coverage
+coverage/
+
+# Public build artifacts
+dist/
+
+# Ignore large project images/uploads inside public/projects
+/public/projects/*.jpg
+/public/projects/*.jpeg
+/public/projects/*.png
+/public/projects/*.webp
+
+# Ignore deployment output (if any)
+/.next/
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Testing
+coverage/
+
+# Production
+build/
+dist/
+out/
+.next/
+
+# Misc
+.DS_Store
+*.pem
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
