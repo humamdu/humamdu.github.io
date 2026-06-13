@@ -83,3 +83,4 @@ lerna-debug.log*
 # OS
 .DS_Store
 Thumbs.db
+.github/workflows/deploy.yml
