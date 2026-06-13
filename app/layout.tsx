@@ -1,15 +1,19 @@
 import type { Metadata } from 'next'
 import { Providers } from '@/components/Providers'
+import { WhatsAppFloat } from '@/components/WhatsAppFloat'
 import '@/styles/globals.css'
 
 export const metadata: Metadata = {
-  title: 'Modern Portfolio | Full-Stack Developer',
+  title: 'Full-Stack Developer',
   description: 'Creative portfolio showcasing enterprise applications and modern web development',
+  icons: {
+    icon: '/icon.png',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://yourportfolio.com',
-    title: 'Modern Portfolio | Full-Stack Developer',
+    title: 'Full-Stack Developer',
     description: 'Creative portfolio showcasing enterprise applications',
     images: [
       {
@@ -31,6 +35,7 @@ export default function RootLayout({
       <body>
         <Providers>
           {children}
+          <WhatsAppFloat />
         </Providers>
       </body>
     </html>

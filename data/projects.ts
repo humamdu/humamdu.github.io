@@ -5,6 +5,7 @@ export interface Project {
   description: string
   shortDescription: string
   image: string
+  p_image: string
   technologies: string[]
   challenges: string[]
   solutions: string[]
@@ -24,7 +25,8 @@ export const projects: Project[] = [
     title: 'Enterprise ERP System for Trading & Inventory',
     shortDescription: 'Advanced inventory management and procurement system',
     description: 'A comprehensive enterprise resource planning system designed for trading and inventory management with multi-platform integrations.',
-    image: '/projects/erp-system.jpg',
+    image: '/projects/erp-project.jpg',
+    p_image: '/projects/erp-project.jpg',
     technologies: ['Yii', 'Laravel', 'JavaScript', 'Ajax', 'MySQL', 'Amazon API', 'eBay API'],
     challenges: [
       'Managing complex inventory workflows across multiple channels',
@@ -52,7 +54,8 @@ export const projects: Project[] = [
     title: 'B2B eCommerce Platform (ERP-Integrated)',
     shortDescription: 'Integrated B2B marketplace with ERP connectivity',
     description: 'Custom B2B eCommerce platform with deep ERP integration, role-based dashboards, and secure payment processing.',
-    image: '/projects/b2b-ecommerce.jpg',
+    image: '/projects/b2b-store.jpg',
+    p_image: '/projects/b2b-project.jpg',
     technologies: ['Laravel', 'MySQL', 'JavaScript', 'Ajax', 'PayPal', 'MX Merchant'],
     challenges: [
       'Complex role-based permission system for different buyer types',
@@ -80,7 +83,8 @@ export const projects: Project[] = [
     title: 'Course Store & Student Evaluation System',
     shortDescription: 'E-learning platform with gamification features',
     description: 'Comprehensive e-learning platform featuring course management, student evaluation, and gamification mechanics.',
-    image: '/projects/course-store.jpg',
+    image: '/projects/course-system.jpg',
+    p_image: '/projects/course-project.jpg',
     technologies: ['Laravel', 'Blade', 'MySQL', 'JavaScript', 'Tailwind CSS'],
     challenges: [
       'Real-time student progress tracking and analytics',
@@ -108,7 +112,8 @@ export const projects: Project[] = [
     title: 'Clinic Management Desktop Application',
     shortDescription: 'Windows-based clinic operations system',
     description: 'Desktop application for clinic operations including patient management, treatment logging, and financial accounting.',
-    image: '/projects/clinic-management.jpg',
+    image: '/projects/clinic-desktop.jpg',
+    p_image: '/projects/clinic-app.jpg',
     technologies: ['C#', '.NET', 'MySQL', 'Windows Forms'],
     challenges: [
       'Building intuitive UI for non-technical clinic staff',
@@ -136,7 +141,8 @@ export const projects: Project[] = [
     title: 'Hematology Lab Management System',
     shortDescription: 'Medical lab test results and reporting system',
     description: 'Laboratory information system for managing test results, patient records, and generating formatted medical reports.',
-    image: '/projects/hematology-lab.jpg',
+    image: '/projects/hematology-system.jpg',
+    p_image: '/projects/hematology-app.jpg',
     technologies: ['C#', '.NET', 'MySQL', 'Crystal Reports'],
     challenges: [
       'Accurate test result calculation and validation',
