@@ -28,8 +28,8 @@ export function Experience() {
                   <p className="text-sm uppercase tracking-[0.3em] text-blue-600 dark:text-blue-400 font-semibold">{item.duration}</p>
                   <h3 className="text-2xl font-semibold mt-2">{item.position}</h3>
                   <p className="text-gray-600 dark:text-gray-400">{item.company}</p>
+                  <p className="text-l text-gray-500 dark:text-gray-400 mt-1">{item.description}</p>
                 </div>
-                <p className="text-sm text-gray-500 dark:text-gray-400">{item.description}</p>
               </div>
               <ul className="mt-6 grid gap-2 text-gray-600 dark:text-gray-400 list-disc list-inside">
                 {item.achievements.map((achievement) => (
