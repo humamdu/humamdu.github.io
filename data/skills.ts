@@ -12,10 +12,10 @@ export const skills: Skill[] = [
     items: [
       { name: 'PHP', proficiency: 90 },
       { name: 'JavaScript', proficiency: 85 },
-      { name: 'Java', proficiency: 80 },
+      { name: 'Java', proficiency: 60 },
       { name: 'C++', proficiency: 85 },
       { name: 'C#', proficiency: 80 },
-      { name: 'Python', proficiency: 75 },
+      { name: 'Python', proficiency: 65 },
     ],
   },
   {
