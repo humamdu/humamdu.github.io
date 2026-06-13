@@ -36,12 +36,6 @@ coverage/
 # Public build artifacts
 dist/
 
-# Ignore large project images/uploads inside public/projects
-/public/projects/*.jpg
-/public/projects/*.jpeg
-/public/projects/*.png
-/public/projects/*.webp
-
 # Ignore deployment output (if any)
 /.next/
 # Dependencies
@@ -83,3 +77,4 @@ lerna-debug.log*
 # OS
 .DS_Store
 Thumbs.db
+.github/workflows/deploy.yml
