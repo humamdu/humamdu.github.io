@@ -47,8 +47,8 @@ export function Projects() {
                 className="relative h-48 rounded-lg mb-4 overflow-hidden group-hover:scale-105 transition-transform duration-300"
                 style={{
                   backgroundImage: `url(${project.image || '/project-placeholder.jpg'})`,
-                  backgroundSize: 'auto 70%',
-                  backgroundPosition: 'center',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'top',
                 }}
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-black/30 to-black/10" />
@@ -113,7 +113,7 @@ export function Projects() {
                 src={!imgError && selected.p_image ? selected.p_image : '/project-placeholder.jpg'}
                 onError={() => setImgError(true)}
                 alt={selected.title}
-                className="w-full h-56 object-cover rounded-md mb-4"
+                className="w-full h-full object-cover rounded-md mb-4"
               />
 
               <p className="mb-4 text-gray-700 dark:text-gray-300">{selected.description}</p>
