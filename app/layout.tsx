@@ -5,7 +5,7 @@ import '@/styles/globals.css'
 
 export const metadata: Metadata = {
   title: 'Full-Stack Developer',
-  description: 'Creative portfolio showcasing enterprise applications and modern web development',
+  description: 'portfolio showcasing enterprise applications and modern web development',
   icons: {
     icon: '/icon.png',
   },
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://yourportfolio.com',
     title: 'Full-Stack Developer',
-    description: 'Creative portfolio showcasing enterprise applications',
+    description: 'portfolio showcasing enterprise applications and modern web development',
     images: [
       {
         url: 'https://yourportfolio.com/og-image.jpg',
